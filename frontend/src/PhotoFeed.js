@@ -27,7 +27,7 @@ function PhotoFeed() {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const res = await fetch("http://localhost:5000/uploads");
+        const res = await fetch("/uploads");
         const data = await res.json();
 
         if (data.length > 0) {
@@ -64,7 +64,7 @@ function PhotoFeed() {
     if (!feedbackText.trim()) return alert("Please write some feedback");
 
     try {
-      const res = await fetch("http://localhost:5000/feedback", {
+      const res = await fetch("/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: feedbackText }),
