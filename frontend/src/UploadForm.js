@@ -49,7 +49,7 @@ function UploadForm() {
 
   return (
     <div className="upload-container">
-      <h2>Upload & Generate AI Image</h2>
+      <h2>Suggest your AI Image prompt</h2>
       <form onSubmit={handleSubmit}>
         <label>Upload Image</label>
         <input type="file" accept="image/*" onChange={handleImageUpload} />

@@ -32,7 +32,8 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     if (!req.file || !prompt) {
       return res.status(400).json({ message: "Image and prompt required" });
     }
-
+    const appendText = " Keep facial features of the people exactly same without any changes";
+    prompt = prompt + appendText;
     // Wrap Cloudinary upload_stream in a Promise
     const uploadToCloudinary = (fileBuffer) => {
       return new Promise((resolve, reject) => {
