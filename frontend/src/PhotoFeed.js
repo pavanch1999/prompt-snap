@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./PhotoFeed.css";
+import promptsnapcard from "./assets/promptsnapcard.png";
+import featurecard from "./assets/featurecardcard.png"
+
 import {
   FaHeart,
   FaRegCopy,
@@ -13,7 +16,9 @@ import { Link } from "react-router-dom";
 
 function PhotoFeed() {
   const fallbackPhotos = [
-    { imageUrl: "https://picsum.photos/id/1018/800/1400", prompt: "Beautiful mountains" },
+    { imageUrl: promptsnapcard, prompt: "Hello world" },
+    { imageUrl: featurecard, prompt: "Hello world" },
+    
     { imageUrl: "https://picsum.photos/400/600?random=1, ?random=2", prompt: "Peaceful lake" },
     { imageUrl: "https://picsum.photos/400/600?grayscale", prompt: "Misty forest" },
     
