@@ -19,8 +19,7 @@ function PhotoFeed() {
     { imageUrl: promptsnapcard, prompt: "Hello world" },
     { imageUrl: featurecard, prompt: "Hello world" },
     
-    { imageUrl: "https://picsum.photos/400/600?random=1, ?random=2", prompt: "Peaceful lake" },
-    { imageUrl: "https://picsum.photos/400/600?grayscale", prompt: "Misty forest" },
+    
     
   ];
 
