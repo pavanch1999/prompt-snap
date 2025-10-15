@@ -25,7 +25,7 @@ function UploadForm() {
       formData.append("image", file);
       formData.append("prompt", prompt);
 
-      const res = await fetch("http://localhost:5000/upload", {
+      const res = await fetch("https://prompt-snap.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
