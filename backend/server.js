@@ -16,19 +16,19 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.use(cors());
 app.use(express.json());
-
+connectDB();
 // Multer setup
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 // Connect MongoDB
-connectDB();
+
 
 
 /* ------------------- Upload Routes ------------------- */
 app.post("/upload", upload.single("image"), async (req, res) => {
   try {
-    const { prompt } = req.body;
+    let { prompt } = req.body;
     if (!req.file || !prompt) {
       return res.status(400).json({ message: "Image and prompt required" });
     }
